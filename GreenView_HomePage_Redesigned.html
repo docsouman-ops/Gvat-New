@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green View Agro Tech — Modern Farming & PM Surya Ghar Solutions</title>
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  :root {
+    --g900: #052e16;
+    --g800: #14532d;
+    --g700: #15803d;
+    --g600: #16a34a;
+    --g500: #22c55e;
+    --g100: #dcfce7;
+    --g50:  #f0fdf4;
+    --dark: #0f172a;
+    --dark2: #1e293b;
+    --slate: #475569;
+    --muted: #94a3b8;
+    --orange: #f97316;
+    --orange-h: #ea580c;
+    --yellow: #fbbf24;
+    --teal: #27c9a0;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --bg: #f8f9fa;
+    --radius: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ════════════════════════════════
+     ANNOUNCEMENT BAR
+  ════════════════════════════════ */
+  .ann-bar {
+    background: var(--g800);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+  }
+
+  .ann-bar span { color: var(--yellow); font-weight: 700; }
+
+  /* ════════════════════════════════
+     NAVIGATION
+  ════════════════════════════════ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--g600);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 2px 8px rgba(22,163,74,0.35);
+    flex-shrink: 0;
+  }
+
+  .logo-wordmark { line-height: 1.15; }
+  .logo-wordmark strong { font-size: 1.15rem; font-weight: 800; color: var(--dark); letter-spacing: -0.3px; display: block; }
+  .logo-wordmark small { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--slate); font-weight: 600; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark2);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
+    position: relative;
+  }
+
+  .nav-links li a:hover { color: var(--g600); background: var(--g50); }
+
+  .nav-links li.active a {
+    color: var(--g600);
+    font-weight: 600;
+  }
+
+  .nav-links li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -18px; left: 14px; right: 14px;
+    height: 2px;
+    background: var(--g600);
+    border-radius: 1px;
+  }
+
+  .nav-cta {
+    background: var(--g600);
+    color: var(--white) !important;
+    padding: 10px 22px !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 2px 8px rgba(22,163,74,0.35);
+    transition: all 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--g700) !important;
+    color: var(--white) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(22,163,74,0.45) !important;
+  }
+
+  /* ════════════════════════════════
+     HERO SECTION
+  ════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Sunset field layered background */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to right,
+        rgba(10, 25, 18, 0.92) 0%,
+        rgba(10, 25, 18, 0.75) 40%,
+        rgba(10, 25, 18, 0.25) 65%,
+        rgba(10, 25, 18, 0.05) 100%
+      ),
+      linear-gradient(
+        to bottom,
+        #1a3a2a 0%,
+        #2d5a1b 8%,
+        #4a7a1a 15%,
+        #7aaa20 22%,
+        #c4922a 38%,
+        #e8862a 50%,
+        #d97520 58%,
+        #c4831a 65%,
+        #a06a14 72%,
+        #7a4f0e 80%,
+        #5c3a0a 88%,
+        #3d2506 100%
+      );
+  }
+
+  /* Sun glow */
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 28%; right: 32%;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(255, 220, 80, 0.55) 0%, rgba(255, 170, 40, 0.3) 40%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* Field texture lines */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 42%;
+    background: repeating-linear-gradient(
+      1deg,
+      transparent,
+      transparent 18px,
+      rgba(180, 130, 20, 0.07) 18px,
+      rgba(180, 130, 20, 0.07) 20px
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 72px;
+    max-width: 780px;
+  }
+
+  /* Dual badges */
+  .hero-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 26px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .badge-gold {
+    background: rgba(251,191,36,0.15);
+    border-color: rgba(251,191,36,0.45);
+    color: var(--yellow);
+  }
+
+  .badge-teal {
+    background: rgba(39,201,160,0.12);
+    border-color: rgba(39,201,160,0.4);
+    color: var(--teal);
+  }
+
+  .badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.85); }
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+
+  .hero-title-line2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--teal);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.75;
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+
+  .hero-sub strong { color: var(--white); font-weight: 600; }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--g600);
+    color: var(--white);
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(22,163,74,0.4);
+    border: none; cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--g700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(22,163,74,0.5);
+  }
+
+  .btn-subsidy {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(249,115,22,0.4);
+    border: none; cursor: pointer;
+  }
+
+  .btn-subsidy:hover {
+    background: var(--orange-h);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(249,115,22,0.5);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.6);
+  }
+
+  /* Trust tags in hero */
+  .hero-trust {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .htrust-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+  }
+
+  .htrust-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  /* Scroll cue */
+  .scroll-cue {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.4);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .scroll-mouse {
+    width: 22px; height: 36px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+  }
+
+  .scroll-wheel {
+    width: 3px; height: 7px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 2px;
+    animation: scroll-anim 1.8s ease-in-out infinite;
+  }
+
+  @keyframes scroll-anim {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
+  }
+
+  /* ════════════════════════════════
+     TRUST BAR — THE CRITICAL BRIDGE
+  ════════════════════════════════ */
+  .trust-bar {
+    background: var(--dark);
+    padding: 0;
+  }
+
+  .trust-bar-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trust-stat {
+    padding: 28px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .trust-stat:last-child { border-right: none; }
+
+  .trust-stat:hover { background: rgba(255,255,255,0.04); }
+
+  .trust-stat-val {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--yellow);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .trust-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+
+  /* ════════════════════════════════
+     WHO WE ARE
+  ════════════════════════════════ */
+  .wwa-section {
+    background: var(--white);
+    padding: 80px 48px;
+  }
+
+  .wwa-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .wwa-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #f0fdf4 100%);
+    border-radius: var(--radius-lg);
+    padding: 52px 56px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: start;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(22,163,74,0.12);
+    transition: box-shadow 0.3s;
+  }
+
+  .wwa-card:hover { box-shadow: var(--shadow-md); }
+
+  .wwa-icon {
+    width: 72px; height: 72px;
+    background: var(--g600);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 4px 16px rgba(22,163,74,0.35);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .wwa-content {}
+
+  .wwa-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+
+  .wwa-body {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    max-width: 720px;
+  }
+
+  .wwa-body strong { color: var(--dark); font-weight: 700; }
+  .wwa-body .hl { color: var(--g700); font-weight: 600; }
+
+  /* Service tags */
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--white);
+    border: 1.5px solid #bbf7d0;
+    color: var(--g800);
+    font-size: 0.83rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .stag:hover {
+    background: var(--g50);
+    border-color: var(--g600);
+    transform: translateY(-1px);
+  }
+
+  .stag-surya {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #9a3412;
+  }
+
+  .stag-surya:hover {
+    background: #ffedd5;
+    border-color: #fb923c;
+  }
+
+  /* ════════════════════════════════
+     WHATSAPP FLOAT
+  ════════════════════════════════ */
+  .wa-float {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 58px; height: 58px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    z-index: 999;
+    transition: all 0.2s;
+    animation: wa-bounce 3s ease-in-out infinite;
+  }
+
+  .wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 28px rgba(37,211,102,0.65);
+  }
+
+  @keyframes wa-bounce {
+    0%, 90%, 100% { transform: scale(1); }
+    95% { transform: scale(1.06); }
+  }
+
+  /* ════════════════════════════════
+     RESPONSIVE
+  ════════════════════════════════ */
+  @media (max-width: 960px) {
+    .nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 60px 24px; }
+    .trust-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .trust-stat:nth-child(2) { border-right: none; }
+    .trust-stat { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .trust-stat:nth-child(3), .trust-stat:nth-child(4) { border-bottom: none; }
+    .wwa-section { padding: 60px 24px; }
+    .wwa-card { grid-template-columns: 1fr; padding: 36px 28px; }
+    .wwa-title { font-size: 1.6rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title, .hero-title-line2 { font-size: 2.2rem; }
+    .hero-btns { flex-direction: column; }
+    .btn-primary, .btn-subsidy, .btn-ghost { justify-content: center; }
+    .trust-bar-inner { grid-template-columns: 1fr 1fr; }
+    .trust-stat-val { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  🌟 Green View Agro Tech is an <span>Officially Registered PM Surya Ghar Vendor</span> — Serving All of West Bengal · WBSEDCL &amp; CESC Areas Covered
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">🌿</div>
+    <div class="logo-wordmark">
+      <strong>Green View</strong>
+      <small>Agro Tech</small>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+
+    <!-- Dual badges -->
+    <div class="hero-badges">
+      <span class="hero-badge badge-gold">
+        <span class="badge-dot"></span>
+        Official PM Surya Ghar Registered Vendor
+      </span>
+      <span class="hero-badge badge-teal">
+        WBSEDCL + CESC Covered
+      </span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-title">Water. Power. Growth.</h1>
+    <div class="hero-title-line2">All in Your Hands.</div>
+
+    <!-- Sub-headline -->
+    <p class="hero-sub">
+      Irrigation systems, solar pumps, polyhouses, and <strong>PM Surya Ghar rooftop solar</strong> with up to <strong>₹78,000 government subsidy</strong> — complete installation and full support across all of West Bengal.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">
+        📅 Book Free Site Visit
+      </a>
+      <a href="#" class="btn-subsidy">
+        ₹78,000 Subsidy — Check Now →
+      </a>
+      <a href="#" class="btn-ghost">
+        Talk to Us
+      </a>
+    </div>
+
+    <!-- Trust tags -->
+    <div class="hero-trust">
+      <span class="htrust-item"><span class="htrust-dot"></span>WBSEDCL Empanelled</span>
+      <span class="htrust-item"><span class="htrust-dot"></span>CESC Registered</span>
+      <span class="htrust-item"><span class="htrust-dot"></span>All of West Bengal</span>
+      <span class="htrust-item"><span class="htrust-dot"></span>Unlimited Install Capacity</span>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue">
+    <span>Scroll Details</span>
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR — THE CREDIBILITY BRIDGE ═══ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-stat">
+      <span class="trust-stat-val">₹78,000</span>
+      <span class="trust-stat-label">Max Govt. Subsidy<br>PM Surya Ghar</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-stat-val">300 Units</span>
+      <span class="trust-stat-label">Free Electricity<br>Every Month</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-stat-val">17+</span>
+      <span class="trust-stat-label">Authorized<br>Manufacturing Partners</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-stat-val">WB-Wide</span>
+      <span class="trust-stat-label">WBSEDCL + CESC<br>Both Areas Covered</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WHO WE ARE ═══ -->
+<section class="wwa-section">
+  <div class="wwa-inner">
+    <div class="wwa-card">
+      <div class="wwa-icon">🌿</div>
+      <div class="wwa-content">
+        <h2 class="wwa-title">Who We Are</h2>
+        <p class="wwa-body">
+          At <strong>Green View Agro Tech</strong>, we don't just supply equipment — we show up, do the work, and stand behind it. We design and install drip irrigation systems, solar pumping solutions, and polyhouses for farmers across West Bengal. We're also an <span class="hl">officially registered PM Surya Ghar vendor</span>, helping homeowners access up to ₹78,000 in government subsidy for rooftop solar — from portal registration to installation to subsidy in your account. We cover both WBSEDCL and CESC areas, and we take every project personally.
+        </p>
+        <div class="service-tags">
+          <a href="#" class="stag">💧 Irrigation Systems</a>
+          <a href="#" class="stag">☀️ Solar Pumping Systems</a>
+          <a href="#" class="stag">🏠 Polyhouse Construction</a>
+          <a href="#" class="stag stag-surya">🌟 PM Surya Ghar — ₹78K Subsidy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Green%20View%20Agro%20Tech%2C%20I%27m%20interested%20in%20your%20services." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
+</body>
+</html>

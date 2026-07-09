@@ -32,15 +32,20 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link to="/" className="flex items-center gap-2.5 group">
               <motion.div 
-                whileHover={{ rotate: 15 }}
-                className="bg-green-600 p-2 rounded-xl group-hover:bg-green-500 transition-colors shadow-lg shadow-green-600/20"
+                whileHover={{ scale: 1.05 }}
+                className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-green-600 bg-white group-hover:border-green-500 transition-colors shadow-md"
               >
-                <Leaf className="w-6 h-6 text-white" />
+                <img 
+                  src="/logo.jpg" 
+                  alt="Green View Agro Tech" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-2xl font-extrabold tracking-tighter leading-none text-gray-900">Green View</span>
+                <span className="text-xl font-extrabold tracking-tight leading-none text-gray-900">Green View</span>
                 <span className="text-[10px] font-black uppercase tracking-[0.2em] leading-none mt-1 text-green-600">Agro Tech</span>
               </div>
             </Link>

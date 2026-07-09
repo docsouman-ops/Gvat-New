@@ -13,12 +13,17 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-green-600 p-2 rounded-xl">
-                <Leaf className="w-5 h-5 text-white" />
+            <Link to="/" className="flex items-center gap-2.5">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-green-600 bg-white">
+                <img 
+                  src="/logo.jpg" 
+                  alt="Green View Agro Tech" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight leading-none text-white">Green View</span>
+                <span className="text-lg font-extrabold tracking-tight leading-none text-white">Green View</span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] leading-none mt-1 text-green-400">Agro Tech</span>
               </div>
             </Link>

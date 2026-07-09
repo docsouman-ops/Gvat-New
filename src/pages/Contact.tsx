@@ -16,7 +16,7 @@ const faqQuestions = [
   },
   {
     q: "What brands do you use?",
-    a: "We are authorized dealers of Premier Irrigation Adritec Pvt. Ltd. and Jain Irrigation Systems Ltd. We also source Netafim systems and other reputed ISI-certified components depending on the needs of the farmland."
+    a: "We are authorized dealers of Premier Irrigation Adritec Limited and Jain Irrigation Systems Ltd. We also source Netafim systems and other reputed ISI-certified components depending on the needs of the farmland."
   },
   {
     q: "Do you build polyhouses outside West Bengal?",

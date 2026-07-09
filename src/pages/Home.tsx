@@ -68,14 +68,14 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight drop-shadow-sm">
-              Water. Power. Growth.<br />
+              Growing Better Farms,<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-teal-300 to-emerald-300">
-                All in Your Hands.
+                One Field at a Time.
               </span>
             </h1>
             
             <p className="text-base sm:text-lg text-gray-200 max-w-2xl leading-relaxed">
-              Irrigation systems, solar pumps, polyhouses, and <strong>PM Surya Ghar rooftop solar</strong> with up to <strong>₹78,000 government subsidy</strong> — complete installation and full support across all of West Bengal.
+                We bring the right technology to your farmland — from drip irrigation and polyhouses to solar pumps — so you grow more, spend less, and worry less
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -84,21 +84,13 @@ export default function Home() {
                   to="/contact"
                   className="bg-green-600 hover:bg-green-500 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-xl shadow-green-600/30"
                 >
-                  📅 Book Free Site Visit
+                  Explore Our Services
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link
                   to="/services?tab=pmsuryaghar"
                   className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-xl shadow-orange-500/20"
-                >
-                  ₹78,000 Subsidy — Check Now →
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                <Link
-                  to="/contact"
-                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base flex items-center justify-center transition-all"
                 >
                   Talk to Us
                 </Link>
@@ -161,7 +153,7 @@ export default function Home() {
             <div className="space-y-6 relative z-10">
               <h2 className="text-3xl font-black text-gray-950 tracking-tight leading-none">Who We Are</h2>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
-                At <strong>Green View Agro Tech</strong>, we don't just supply equipment — we show up, do the work, and stand behind it. We design and install drip irrigation systems, solar pumping solutions, and polyhouses for farmers across West Bengal. We're also an <span className="text-green-700 font-extrabold bg-green-100/50 px-2 py-0.5 rounded">officially registered PM Surya Ghar vendor</span>, helping homeowners access up to ₹78,000 in government subsidy for rooftop solar — from registration to installation to subsidy in your account. We cover both WBSEDCL and CESC areas, and we take every project personally.
+                At <strong>Green View Agro Tech</strong>, we're not just equipment suppliers — We sit with farmers, understand their land, and then put together the right solution — whether that's a drip line on half an acre or a full polyhouse setup for protected cultivation. Based in West Bengal. we've been working on the ground with farmers and private clients across the region, and we take every project personally.
               </p>
               <div className="flex flex-wrap gap-2.5 pt-2">
                 <span className="flex items-center gap-1.5 bg-white border border-green-200 text-green-800 text-xs font-semibold px-3.5 py-2 rounded-full shadow-sm">💧 Irrigation Systems</span>
@@ -203,7 +195,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-950 mb-3">Irrigation Systems</h3>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
-                Drip, sprinkler, mini & micro, pop-up, foggers — we supply, design, and install. We are authorized dealers of <strong>Premier Irrigation Adritec</strong> and <strong>Jain Irrigation</strong>, sourcing premium materials from <strong>Netafim</strong>.
+                Drip, sprinkler, mini & micro, pop-up, foggers — we supply, design, and install. We work with trusted brands like Premier Irrigation Adritec, Jain Irrigation, and Netafim.
               </p>
               <Link 
                 to="/services?tab=irrigation" 
@@ -227,7 +219,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-950 mb-3">Polyhouse Construction</h3>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
-                We construct robust polyhouses from the ground up — framing, cladding, ventilation, misting systems, and interior automation. Handled by our experienced on-ground engineers for guaranteed durability.
+               We build polyhouses from the ground up — structure, cladding, ventilation, irrigation inside. Both private projects and government-linked work across West Bengal and neighbouring states.
               </p>
               <Link 
                 to="/services?tab=polyhouse" 
@@ -251,7 +243,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-950 mb-3">Solar Pumping Systems</h3>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
-                Highly efficient surface or submersible solar pumps that harness maximum solar energy. We guide you through eligible subsidies, setup the arrays, and guarantee a smooth installation.
+                Surface or submersible, subsidy or private — we install solar pump systems that work reliably and cut your electricity costs from day one.
               </p>
               <Link 
                 to="/services?tab=solar" 
@@ -355,13 +347,13 @@ export default function Home() {
                 Why Farmers Trust Us
               </h2>
               <p className="text-lg text-gray-600 font-medium">
-                We believe in providing honest advice, reliable machinery, and continuous local maintenance.
+              
               </p>
 
               <div className="space-y-4 pt-4">
                 {[
                   "We don't just sell — we install and stand behind our work.",
-                  "Authorized dealer of Premier Irrigation Adritec Pvt. Ltd. & Jain Irrigation Systems Ltd.",
+                  "Authorized dealer of Premier Irrigation Adritec Limited & Jain Irrigation Systems Ltd.",
                   "Government subsidy support (PDMC and other schemes).",
                   "Experienced installation team — not outsourced labor, our own people.",
                   "We work across West Bengal and neighbouring states."
@@ -439,7 +431,6 @@ export default function Home() {
             <div className="space-y-4 max-w-xl text-center lg:text-left">
               <h2 className="text-2xl sm:text-3.5xl font-extrabold tracking-tight">Have a project in mind? Let's talk.</h2>
               <p className="text-green-100 text-sm sm:text-base">
-                Whether you have simple questions about subsidy eligibility or want a comprehensive polyhouse estimate, we are standing by to help.
               </p>
             </div>
             
@@ -453,6 +444,17 @@ export default function Home() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <span>Call: {customPhone}</span>
+              </a>
+
+              {/* Email */}
+              <a 
+                href={`mailto:${customEmail}`}
+                className="flex items-center gap-3 bg-white text-green-950 font-bold px-6 py-4 rounded-2xl hover:bg-green-50 transition-colors shadow-lg shadow-black/10 text-sm sm:text-base shrink-0"
+              >
+                <div className="bg-green-100 p-1.5 rounded-xl text-green-600">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <span>Email: {customEmail}</span>
               </a>
 
               {/* WhatsApp */}

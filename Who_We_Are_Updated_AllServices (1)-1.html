@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are — Updated Options</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 20px; color: #1e293b; }
+
+  .page-title { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1a5a4a, #1a8b6a); border-radius: 12px; color: white; margin-bottom: 40px; }
+  .page-title h1 { font-size: 1.6rem; margin-bottom: 6px; }
+  .page-title p { font-size: 0.9rem; opacity: 0.85; }
+
+  .option-wrap { margin-bottom: 40px; }
+  .option-label { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .label-badge { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 14px; border-radius: 20px; }
+  .badge-rec { background: #dcfce7; color: #166534; }
+  .badge-alt { background: #f1f5f9; color: #475569; }
+  .option-label h3 { font-size: 1rem; font-weight: 600; color: #1a5a4a; }
+
+  /* THE CARD — matching exact website style */
+  .who-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 40%, #f0fdf4 100%);
+    border-radius: 20px;
+    padding: 48px 52px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .icon-box {
+    width: 70px; height: 70px; min-width: 70px;
+    background: #16a34a;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(22,163,74,0.3);
+  }
+
+  .card-content { flex: 1; }
+  .card-title { font-size: 1.8rem; font-weight: 700; color: #1e293b; margin-bottom: 16px; }
+  .card-body { font-size: 1rem; line-height: 1.8; color: #374151; }
+  .card-body strong { color: #1e293b; font-weight: 600; }
+  .card-body .highlight { color: #15803d; font-weight: 600; }
+
+  /* SERVICE TAGS — new addition */
+  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .stag {
+    display: flex; align-items: center; gap: 6px;
+    background: white; border: 1px solid #bbf7d0;
+    color: #166534; font-size: 0.8rem; font-weight: 500;
+    padding: 5px 12px; border-radius: 20px;
+  }
+  .stag.surya { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
+
+  .why-note { background: white; border-left: 4px solid #16a34a; padding: 14px 18px; border-radius: 0 8px 8px 0; margin-top: 20px; font-size: 0.85rem; color: #374151; line-height: 1.6; }
+  .why-note strong { color: #1a5a4a; }
+
+  /* Word count badge */
+  .wc { font-size: 0.75rem; background: #f1f5f9; color: #64748b; padding: 3px 10px; border-radius: 10px; margin-left: auto; }
+
+  .divider { border: none; border-top: 1px solid #e2e8f0; margin: 40px 0; }
+
+  @media (max-width: 768px) {
+    .who-card { flex-direction: column; padding: 30px 24px; }
+    .card-title { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>Who We Are — Updated Options</h1>
+  <p>All 4 services now included: Irrigation · Solar Pumps · Polyhouses · PM Surya Ghar</p>
+</div>
+
+<!-- ═══ OPTION 1 — RECOMMENDED ═══ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <span class="label-badge badge-rec">⭐ Recommended</span>
+    <h3>Version 1 — Balanced (Home Page Fit)</h3>
+    <span class="wc">~90 words</span>
+  </div>
+
+  <div class="who-card">
+    <div class="icon-box">🌿</div>
+    <div class="card-content">
+      <h2 class="card-title">Who We Are</h2>
+      <p class="card-body">
+        At <strong>Green View Agro Tech</strong>, we don't just supply equipment — we show up, do the work, and stand behind it. We design and install drip irrigation systems, solar pumping solutions, and polyhouses for farmers across West Bengal. We're also an <span class="highlight">officially registered PM Surya Ghar vendor</span>, helping homeowners access up to ₹78,000 in government subsidy for rooftop solar — from registration to installation to subsidy in your account. We cover both WBSEDCL and CESC areas, and we take every project personally.
+      </p>
+      <div class="service-tags">
+        <span class="stag">💧 Irrigation Systems</span>
+        <span class="stag">☀️ Solar Pumps</span>
+        <span class="stag">🏠 Polyhouses</span>
+        <span class="stag surya">🌟 PM Surya Ghar Vendor</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-note" style="max-width:1100px; margin: 12px auto 0;">
+    <strong>Why this works:</strong> Covers all 4 services naturally without listing them mechanically. PM Surya Ghar is introduced with the ₹78,000 hook — the most powerful line on the page. Geographic coverage (WBSEDCL + CESC) anchors trust for West Bengal visitors. "Stand behind it" replaces the weaker "take every project personally" — it's more concrete. Service tags below the text act as quick visual scanners for people who don't read the full paragraph.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══ OPTION 2 — SHORT VERSION ═══ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <span class="label-badge badge-alt">Alternative</span>
+    <h3>Version 2 — Short & Punchy (Space-Constrained Layouts)</h3>
+    <span class="wc">~65 words</span>
+  </div>
+
+  <div class="who-card">
+    <div class="icon-box">🌿</div>
+    <div class="card-content">
+      <h2 class="card-title">Who We Are</h2>
+      <p class="card-body">
+        At <strong>Green View Agro Tech</strong>, we solve farming challenges and help homeowners save on electricity — completely. We install irrigation systems, solar pumps, and polyhouses for farmers. We're also an <span class="highlight">officially registered PM Surya Ghar vendor</span> helping West Bengal homeowners claim up to ₹78,000 in rooftop solar subsidy — start to finish. One team. All of West Bengal. Every project handled personally.
+      </p>
+      <div class="service-tags">
+        <span class="stag">💧 Irrigation</span>
+        <span class="stag">☀️ Solar Pumps</span>
+        <span class="stag">🏠 Polyhouses</span>
+        <span class="stag surya">🌟 PM Surya Ghar</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-note" style="max-width:1100px; margin: 12px auto 0;">
+    <strong>Why this works:</strong> Maximum impact in minimum words. "One team. All of West Bengal. Every project handled personally." — the three-phrase ending creates rhythm and memorability. Ideal if the card design has limited vertical space.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══ OPTION 3 — DETAILED VERSION ═══ -->
+<div class="option-wrap">
+  <div class="option-label">
+    <span class="label-badge badge-alt">Alternative</span>
+    <h3>Version 3 — Detailed (About Page / Full Story)</h3>
+    <span class="wc">~120 words</span>
+  </div>
+
+  <div class="who-card">
+    <div class="icon-box">🌿</div>
+    <div class="card-content">
+      <h2 class="card-title">Who We Are</h2>
+      <p class="card-body">
+        At <strong>Green View Agro Tech</strong>, we work on the ground with farmers and homeowners — understanding their land, their water supply, and their electricity costs before recommending anything. We design and install drip irrigation, sprinkler, and micro irrigation systems for farmers. We set up solar pumping systems and build polyhouses for year-round cultivation. And as an <span class="highlight">officially registered PM Surya Ghar vendor</span>, we manage the complete rooftop solar journey for homeowners — from government portal registration and installation to net metering and the ₹78,000 subsidy reaching your bank account. We cover both WBSEDCL and CESC areas. We're based in West Bengal, and we take every project personally — because we know the difference between a system that works and one that's been forgotten after installation.
+      </p>
+      <div class="service-tags">
+        <span class="stag">💧 Drip & Sprinkler Irrigation</span>
+        <span class="stag">☀️ Solar Pumping Systems</span>
+        <span class="stag">🏠 Polyhouse Construction</span>
+        <span class="stag surya">🌟 PM Surya Ghar — Official Vendor</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-note" style="max-width:1100px; margin: 12px auto 0;">
+    <strong>Why this works:</strong> Best for the About page where space allows the full story. Ends with the original closing line "a system that works vs one that's been forgotten" — your strongest line from the original, kept and enhanced. Full service breakdown with more detail on each area.
+  </div>
+</div>
+
+</body>
+</html>

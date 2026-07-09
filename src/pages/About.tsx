@@ -10,7 +10,7 @@ export default function About() {
 
   // Expanded manufacturer trust list for West Bengal empanelment (PDF 3 Page 16)
   const trustPartners = [
-    { name: "Premier Irrigation Adritec Pvt. Ltd.", type: "Authorized Dealer", cert: "ISO 9001:2015 Certified" },
+    { name: "Premier Irrigation Adritec Limited", type: "Authorized Dealer", cert: "ISO 9001:2015 Certified" },
     { name: "Jain Irrigation Systems Ltd.", type: "Authorized Dealer", cert: "World's Largest Drip Manufacturer" },
     { name: "Netafim Israel", type: "Sourced Systems Partner", cert: "Pioneer of Micro Irrigation" },
     { name: "Captain Polyplast Ltd", type: "Authorized Dealer", cert: "Premium Quality PVC & HDPE Pipes" },
@@ -39,7 +39,6 @@ export default function About() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-            Our Roots
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight leading-none text-white text-shadow">
             We Started Because <br />
@@ -61,18 +60,17 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
-              <h2 className="text-xs font-bold text-green-600 uppercase tracking-widest bg-green-50 px-3.5 py-1.5 rounded-full w-fit">Who We Are</h2>
-              <h3 className="text-3xl sm:text-4.5xl font-black text-gray-950 tracking-tight leading-tight">We Show Up, Do the Work, and Stand Behind It.</h3>
               
               <div className="text-gray-700 text-base sm:text-lg leading-relaxed space-y-4">
                 <p>
-                  At <strong>Green View Agro Tech</strong>, we work on the ground with farmers and homeowners — understanding their land, their water supply, and their electricity costs before recommending anything. We design and install drip irrigation, sprinkler, and micro irrigation systems for farmers. We set up solar pumping systems and build polyhouses for year-round cultivation.
+                  <strong>Green View Agro Tech</strong>, started with a simple belief — that farmers in our region deserve access to the same quality irrigation technology, protected farming structures, and renewable energy solutions that modern agriculture demands. We saw a gap between what was available and what was actually reaching the ground level. So we decided to bridge it ourselves.
                 </p>
                 <p>
-                  And as an <strong className="text-green-700 font-extrabold bg-green-100/40 px-1 py-0.5 rounded border border-green-200">officially registered PM Surya Ghar vendor</strong>, we manage the complete rooftop solar journey for homeowners — from government portal registration and installation to net metering and the <strong>₹78,000 subsidy</strong> reaching your bank account. We cover both <strong>WBSEDCL and CESC areas</strong>.
+                  We are authorized dealers of Premier Irrigation Adritec Limited and Jain Irrigation Systems Ltd. — two of the most respected names in irrigation manufacturing in India. Alongside that, we source equipment from other quality manufacturers like Netafim to make sure our clients always get the best fit for their field, not just whatever we have in stock.
+
                 </p>
                 <p>
-                  We're based in West Bengal, and we take every project personally — because we know the difference between a system that works and one that's been forgotten after installation. We are authorized dealers of <strong>Premier Irrigation Adritec Pvt. Ltd.</strong> and <strong>Jain Irrigation Systems Ltd.</strong>, and we source materials from <strong>Netafim</strong> and other top empanelled manufacturers to ensure our clients always receive the absolute best fit for their field.
+                  Over the years, we've grown from doing irrigation installations to building complete polyhouses and setting up solar pump systems. Today, we serve both individual farmers and private project clients — and we handle government subsidy-linked work as well, helping eligible farmers access schemes like PDMC without the usual headache.
                 </p>
               </div>
             </motion.div>

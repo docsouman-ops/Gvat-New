@@ -3,28 +3,26 @@ import { CheckCircle2, Award, Zap, ShieldAlert, Heart, Activity, Globe, ShieldCh
 
 const brandPartners = [
   {
-    name: "Premier Irrigation Adritec Pvt. Ltd.",
+     logoText: "Premier Irrigation Adritec Pvt. Ltd",
     status: "Authorised Dealer",
     desc: "We are authorized dealers of Premier Irrigation Adritec, one of India's leading manufacturers of drip irrigation, sprinkler irrigation, and micro irrigation products. Their equipment is specifically designed for Indian field conditions and has a strong track record across the country.",
-    logoText: "Premier Irrigation Adritec"
+    
   },
   {
-    name: "Jain Irrigation Systems Ltd.",
+    logoText: "Jain Irrigation Systems Ltd.",
     status: "Authorised Dealer",
-    desc: "Jain Irrigation is one of the largest irrigation companies in the world and an absolute household name in Indian agriculture. As authorized dealers, we supply their full range of drip and sprinkler systems and have access to their technical support team when needed.",
-    logoText: "Jain Irrigation Systems"
+    desc: "Jain Irrigation is one of the largest irrigation companies in the world and a household name in Indian agriculture. As authorized dealers, we supply their full range of drip and sprinkler systems and have access to their technical support when needed.",
   },
   {
-    name: "Netafim",
+   logoText: "Netafim",
     status: "Sourced Systems Partner",
     desc: "Netafim is an Israeli company and the world's pioneer in drip irrigation. Their products set the benchmark for precision water release and extreme durability under pressure. We source Netafim systems for projects demanding top performance.",
-    logoText: "Netafim Israel"
   },
   {
-    name: "Captain Polyplast Ltd",
+    logoText: "Captain Polyplast Ltd",
     status: "Authorised Dealer",
     desc: "A highly trusted brand in Indian agriculture, Captain Polyplast is a pioneer in premium quality micro-irrigation systems, polymer pipes, and durable drip line accessories.",
-    logoText: "Captain Polyplast"
+    
   },
   {
     name: "Greaves Cotton Limited",
@@ -146,26 +144,29 @@ export default function Partners() {
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="text-green-400 font-extrabold uppercase tracking-[0.2em] text-xs">Authentic Sourcing</span>
+          {/*<span className="text-green-400 font-extrabold uppercase tracking-[0.2em] text-xs">Authentic Sourcing</span>*/}
+
           <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight leading-none text-white text-shadow">
-            Brands We Trust, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">
+            We Work With Names You Can Trust. <br />
+
+           {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-200">
               Equipment We Stand Behind.
-            </span>
+            </span> */}
           </h1>
           <p className="text-lg text-emerald-100 max-w-2xl mx-auto mt-4 font-semibold">
-            We don't compromise on where we source our equipment. Every brand has been selected because it performs in real, rugged West Bengal soil.
+           {/* We don't compromise on where we source our equipment. Every brand has been selected because it performs in real, rugged West Bengal soil. */}
+           We don't compromise on where we source our equipment. Every brand we work with has been chosen because it performs in real field conditions — not just on paper. 
           </p>
         </div>
       </section>
 
-      {/* 🔷 BRANDS / PARTNERS (Page 6) */}
+      {/* 🔷 BRANDS / PARTNERS  */}
       <section className="py-24 bg-white border-b border-gray-150">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-green-600 font-bold uppercase tracking-widest text-xs bg-green-50 px-4 py-1.5 rounded-full inline-block mb-4">Authorized Dealers</span>
-            <h2 className="text-3xl sm:text-4.5xl font-black text-gray-900 tracking-tight leading-tight">Our Manufacturing Partners</h2>
-            <p className="text-gray-600 mt-2 text-base sm:text-lg">Direct technical support and complete manufacturer warranty guarantee.</p>
+           {/* <span className="text-green-600 font-bold uppercase tracking-widest text-xs bg-green-50 px-4 py-1.5 rounded-full inline-block mb-4">Authorized Dealers</span>*/}
+            <h2 className="text-3xl sm:text-4.5xl font-black text-gray-900 tracking-tight leading-tight"> Here's who we partner with: </h2>
+           {/* <p className="text-gray-600 mt-2 text-base sm:text-lg">Direct technical support and complete manufacturer warranty guarantee.</p>*/}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

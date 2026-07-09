@@ -378,21 +378,37 @@ export default function Services() {
                         }`}
                       >
                         {col.isPopular && (
-                          <div className="bg-amber-500 text-white text-center text-[10px] font-black uppercase tracking-widest py-1 block leading-none">
+                          <div className="bg-amber-400 text-amber-950 text-center text-[10px] font-black uppercase tracking-widest py-1.5 block leading-none">
                             Most Popular & Best Value
                           </div>
                         )}
-                        <div className="p-5 space-y-4 flex-grow">
-                          <div className="border-b border-gray-100 pb-3">
-                            <span className="text-2xl font-black text-gray-950 block">{col.kw}</span>
-                            <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider">System Size</span>
+                        
+                        {/* Solid colored header block matching user requested screenshot */}
+                        <div className={`text-white p-6 text-center flex flex-col items-center justify-center border-b ${
+                          col.isPopular 
+                            ? "bg-orange-600 border-orange-700" 
+                            : col.kw === "4 kW" || col.kw === "5 kW"
+                              ? "bg-slate-700 border-slate-800"
+                              : "bg-[#14532d] border-green-800"
+                        }`}>
+                          <span className="text-4xl font-black tracking-tight block leading-none">{col.kw}</span>
+                          <span className="text-[10px] text-white/70 uppercase font-bold tracking-widest mt-2 block leading-none">SYSTEM SIZE</span>
+                          <div className={`px-4.5 py-1.5 rounded-full text-xs font-black text-white inline-flex items-center justify-center mt-3.5 border shadow-sm leading-none ${
+                            col.isPopular 
+                              ? "bg-white/20 border-white/20" 
+                              : col.kw === "4 kW" || col.kw === "5 kW"
+                                ? "bg-white/10 border-white/10"
+                                : "bg-white/15 border-white/10"
+                          }`}>
+                            {col.subsidy} {col.isPopular ? "Max Subsidy" : col.kw === "4 kW" || col.kw === "5 kW" ? "Subsidy (Same as 3kW)" : "Subsidy"}
                           </div>
+                        </div>
 
+                        <div className="p-5 space-y-4 flex-grow">
                           <div className="space-y-3.5 text-xs">
                             <div>
-                              <span className="text-gray-400 block font-bold uppercase text-[9px]">Government Subsidy:</span>
-                              <span className="text-base font-black text-green-600 block leading-none mt-0.5">{col.subsidy}</span>
-                              <p className="text-[10px] text-gray-500 leading-tight mt-1">{col.subText}</p>
+                              <span className="text-gray-400 block font-bold uppercase text-[9px]">Subsidy Details:</span>
+                              <p className="text-[10px] text-gray-600 leading-relaxed mt-0.5">{col.subText}</p>
                             </div>
 
                             <div>
@@ -769,7 +785,7 @@ export default function Services() {
               </motion.div>
             )}
 
-            {/* 🔷 2. IRRIGATION TAB */}
+            {/*  2. IRRIGATION TAB */}
             {activeTab === "irrigation" && (
               <motion.div
                 key="tab-irrigation"
@@ -810,11 +826,14 @@ export default function Services() {
                         <Droplets className="w-6 h-6" />
                       </div>
                       <h4 className="text-xl font-bold text-gray-950">Drip Irrigation</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        Delivers water directly to the root zone of each plant through a network of pipes, tubes, and emitters. Saves 30–50% more water compared to flood irrigation, improving crop yield and quality.
+                      <p className="text-gray-600 text-sm leading-relaxed text-justify">
+                        Drip irrigation delivers water directly to the root zone of each plant through a network of pipes, tubes, and emitters. It's proven to save 30–50% more water compared to flood irrigation and significantly improves crop yield and quality.
+                      </p>
+                       <p className="text-sm text-gray-500">
+                        <strong>What we do::</strong> We design the layout based on your crop type, row spacing, soil type, and water source. We use equipment from Premier Irrigation Adritec, Jain Irrigation, and Netafim — all of which are field-tested and long-lasting. Our team does the full installation, from the main line to the last emitte.
                       </p>
                       <p className="text-sm text-gray-500">
-                        <strong>Best for:</strong> Vegetables, fruits, cash crops, orchards, plantation crops.
+                        <strong>Best for:</strong> Vegetables, fruits, cash crops, orchards, plantation crops
                       </p>
                     </div>
 
@@ -825,7 +844,10 @@ export default function Services() {
                       </div>
                       <h4 className="text-xl font-bold text-gray-950">Sprinkler Irrigation</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Mimics rainfall by spraying water over the crop through standard or layout-spaced sprinklers. Works suited for crops that benefit from uniform surface moisture.
+                        Sprinkler systems mimic rainfall — water is sprayed over the crop through a network of pipes and rotating or fixed sprinkler heads. It suits crops that benefit from uniform water coverage across the surface.
+                      </p>
+                       <p className="text-sm text-gray-500">
+                        <strong>What we do::</strong> We assess your field size, water pressure availability, and crop type, and design a sprinkler system that covers your land evenly without overlapping zones or dry patches. Installation is clean, functional, and built to last.
                       </p>
                       <p className="text-sm text-gray-500">
                         <strong>Best for:</strong> Wheat, groundnuts, vegetables, lawns, large open fields.
@@ -839,10 +861,13 @@ export default function Services() {
                       </div>
                       <h4 className="text-xl font-bold text-gray-950">Mini & Micro Irrigation</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Interim precision systems that sit between drip and sprinkler. Perfect for dense high-value cultivation, nursery beds, and specialized orchard blocks.
+                        Mini and micro systems sit between drip and sprinkler — they're ideal for closely spaced crops, nurseries, and high-value cultivation where precision and coverage both matter.
+                      </p>
+                       <p className="text-sm text-gray-500">
+                        <strong>What we do::</strong> We supply and install mini sprinklers and micro jets that can serve specific zones of your farm with the right application rate. These are popular in fruit orchards and protected cultivation setups.
                       </p>
                       <p className="text-sm text-gray-500">
-                        <strong>Best for:</strong> Orchards, nurseries, coconut, banana, arecanut farms.
+                        <strong>Best for:</strong>  Orchards, nurseries, coconut, banana, arecanut farms.
                       </p>
                     </div>
 
@@ -853,10 +878,13 @@ export default function Services() {
                       </div>
                       <h4 className="text-xl font-bold text-gray-950">Pop-Up Irrigation</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Heads automatically retract into the sod when pressure is turned off, keeping landscapes uncluttered. Ideal for private estates, villas, and institutions.
+                        Pop-up sprinkler systems are designed mainly for private projects — gardens, lawns, landscapes, and institutional premises. The heads retract into the ground when not in use, keeping the area clean and the system protected.
+                      </p>
+                       <p className="text-sm text-gray-500">
+                        <strong>What we do::</strong> We design and install pop-up systems for private clients including farmhouses, resorts, institutional campuses, and gardens. Full design-to-installation service..
                       </p>
                       <p className="text-sm text-gray-500">
-                        <strong>Best for:</strong> Private gardens, farmhouses, landscapes, institutional lawns.
+                        <strong>Best for:</strong> Private gardens, landscapes, golf courses, institutional premises.
                       </p>
                     </div>
 
@@ -867,10 +895,34 @@ export default function Services() {
                       </div>
                       <h4 className="text-xl font-bold text-gray-950">Foggers / Misting Systems</h4>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Distributes ultra-fine droplets that instantly cool air and maintain critical node humidity inside greenhouse structures or livestock sheds.
+                        Foggers release ultra-fine water droplets that cool the air temperature and raise humidity. They're widely used inside polyhouses, nurseries, and in horticulture setups where temperature control matters.
+                      </p>
+                       <p className="text-sm text-gray-500">
+                        <strong>What we do::</strong> We install fogging systems as standalone setups or as part of larger polyhouse or irrigation projects. We source quality fogger nozzles and fittings and install them with proper pressure lines.
                       </p>
                       <p className="text-sm text-gray-500">
-                        <strong>Best for:</strong> Polyhouses, plant nurseries, cooling in poultry or livestock sheds.
+                        <strong>Best for:</strong>  Polyhouses, nurseries, cooling in poultry or livestock sheds.
+                      </p>
+                    </div>
+
+                     {/* GOVERNMENT SUBSIDY SUPPORT */}
+                    <div className="bg-white p-8 rounded-3xl border border-gray-150 shadow-sm space-y-4">
+                      <div className="bg-teal-50 text-teal-600 p-3 rounded-2xl w-fit">
+                        <Droplets className="w-6 h-6" />
+                      </div>
+                      <h4 className="text-xl font-bold text-gray-950"> GOVERNMENT SUBSIDY SUPPORT </h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        We help eligible farmers apply for and receive government subsidies under schemes like PDMC (Pradhan Mantri Krishi Sinchayee Yojana related components) and state-level programs. We handle the documentation support and make the process as smooth as possible so you're not stuck in paperwork when you should be on your farm.
+                      </p>
+                    
+                      <p className="text-sm text-gray-500">
+                        <a 
+                          href="tel:+919051878901" 
+                          className="inline-flex items-center gap-1.5 text-green-600 hover:text-green-700 font-bold hover:underline transition-all duration-200"
+                        >
+                          <Phone className="w-4.5 h-4.5" />
+                          <strong>Talk to us about your eligibility: +91 90518 78901</strong>
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -914,8 +966,9 @@ export default function Services() {
                       Polyhouses Built to Last — Because Your Crops Can't Afford Anything Less
                     </h2>
                     <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                      A polyhouse extends your growing season, protects your crops from unpredictable weather, and helps you grow high-value produce that simply can't be done in open fields. We've been building polyhouses in West Bengal and neighbouring states, and we know how to design structures that hold up in our regional climate — the high humidity, heavy monsoon winds, and scorching heat.
+                      A polyhouse extends your growing season, protects your crops from unpredictable weather, and helps you grow high-value produce that simply can't be done in open fields. We've been building polyhouses in West Bengal and neighbouring states, and we know how to design structures that hold up in our regional climate — the humidity, the monsoon winds, the heat.
                     </p>
+                    
                   </div>
                   <div className="rounded-3xl overflow-hidden shadow-md border border-gray-150">
                     <img 
@@ -929,76 +982,89 @@ export default function Services() {
 
                 {/* Material breakdown */}
                 <div className="space-y-8 pt-6">
-                  <h3 className="text-2.5xl font-bold text-gray-900 border-b border-gray-200 pb-3">What Goes Into Our Polyhouses</h3>
+                  <h3 className="text-2.5xl font-bold text-gray-900 border-b border-gray-200 pb-3"> WHAT WE BUILD</h3>
+                  <div className="space-y-3">
+        
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                        We handle the complete polyhouse project — from foundation to the last nut and bolt inside. Here's what goes into every structure we build:
+                      </p>
+                    </div>
+                  
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Item 1 */}
                     <div className="space-y-3">
                       <span className="text-green-600 font-extrabold text-lg">01. Structural Framework</span>
-                      <h4 className="text-xl font-bold text-gray-950">Heavy-Duty Skeleton</h4>
+                    { /* <h4 className="text-xl font-bold text-gray-950">Heavy-Duty Skeleton</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Foundation pipes, columns, arches, purlins, and gutters form the backbone. We outsource these components from top manufacturers and assemble them on-site. Designed to handle crop load, wind, and trellis.
-                      </p>
+                        {/*Foundation pipes, columns, arches, purlins, and gutters form the backbone. We outsource these components from top manufacturers and assemble them on-site. Designed to handle crop load, wind, and trellis.*/}
+                                                The skeleton of the polyhouse — foundation pipes, columns, arches, purlins, and gutters — forms the backbone of the entire structure. We outsource these components from quality manufacturers and assemble them on-site with our expert construction team. Every structure is designed to handle crop load, wind load, and the weight of internal systems.
+                        </p>
                     </div>
 
                     {/* Item 2 */}
                     <div className="space-y-3">
-                      <span className="text-green-600 font-extrabold text-lg">02. Covering Material</span>
-                      <h4 className="text-xl font-bold text-gray-950">UV-Stabilized Polyethylene Film</h4>
+                      <span className="text-green-600 font-extrabold text-lg">02. Covering Material (Polyethylene Film)</span>
+                      {/* <h4 className="text-xl font-bold text-gray-950">UV-Stabilized Polyethylene Film</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        We install heavy duty, UV-stabilized poly sheets to filter sunlight and protect capsicum or flowers from pests. Secured tightly using high-grade aluminium profiles and spring grippers.
+                       {/* We install heavy duty, UV-stabilized poly sheets to filter sunlight and protect capsicum or flowers from pests. Secured tightly using high-grade aluminium profiles and spring grippers.*/}
+We use UV-stabilized polyethylene sheets that protect your crops from harsh sunlight, pests, and heavy rain while still allowing the right amount of light transmission. The material we use is sourced from reliable suppliers and installed with aluminium profile grippers that hold it securely without tearing.
                       </p>
                     </div>
 
                     {/* Item 3 */}
                     <div className="space-y-3">
                       <span className="text-green-600 font-extrabold text-lg">03. Ventilation Systems</span>
-                      <h4 className="text-xl font-bold text-gray-950">Sufficient Air Exchange</h4>
+                      {/* <h4 className="text-xl font-bold text-gray-950">Sufficient Air Exchange</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Heat accumulation inside is toxic. We build optimized manual or automated side and roof roll-up vents to allow natural breeze to vent warm air during afternoons.
+Heat buildup inside a polyhouse can kill crops. We install properly designed ventilation — side vents, roof vents, or automated systems depending on the scale and crop requirement — to keep air moving and temperatures in check.
+                        {/*Heat accumulation inside is toxic. We build optimized manual or automated side and roof roll-up vents to allow natural breeze to vent warm air during afternoons.*/}
                       </p>
                     </div>
 
                     {/* Item 4 */}
                     <div className="space-y-3">
-                      <span className="text-green-600 font-extrabold text-lg">04. Foggers & Misting Inside</span>
-                      <h4 className="text-xl font-bold text-gray-950">Climate Regulation</h4>
+                      <span className="text-green-600 font-extrabold text-lg">04. Foggers and Misting Inside</span>
+                       {/* <h4 className="text-xl font-bold text-gray-950">Climate Regulation</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        For humidity management and heat drop, we install reliable mist and fogger arrays inside the polyhouse.
+                       {/* For humidity management and heat drop, we install reliable mist and fogger arrays inside the polyhouse. */}
+                        For crops that need humidity control or temperature reduction, we install fogging and misting systems within the polyhouse as part of the complete setup.
                       </p>
                     </div>
 
                     {/* Item 5 */}
                     <div className="space-y-3">
                       <span className="text-green-600 font-extrabold text-lg">05. Internal Drip Irrigation</span>
-                      <h4 className="text-xl font-bold text-gray-950">Integrated Drip Lines</h4>
+                     {/* <h4 className="text-xl font-bold text-gray-950">Integrated Drip Lines</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Every polyhouse is preconfigured with customized drip systems inside, making watering and soluble fertigation clean, fully automatic, and completely precise.
+                       {/* Every polyhouse is preconfigured with customized drip systems inside, making watering and soluble fertigation clean, fully automatic, and completely precise. */}
+                        Every polyhouse we build can be fitted with a drip irrigation system inside so water and fertigation are handled efficiently without manual labor inside the structure.
                       </p>
                     </div>
 
                     {/* Item 6 */}
                     <div className="space-y-3">
-                      <span className="text-green-600 font-extrabold text-lg">06. Fan & Pad Cooling</span>
-                      <h4 className="text-xl font-bold text-gray-950">Evaporative Cooling Systems</h4>
+                      <span className="text-green-600 font-extrabold text-lg">06. Fan and Pad Cooling System</span>
+                    {/*  <h4 className="text-xl font-bold text-gray-950">Evaporative Cooling Systems</h4> */}
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        For delicate seeds or high-end summer harvests, we build standard cellulose cooling wet pads and industrial exhaust fans to drop interiors by up to 10°C.
+                       {/* For delicate seeds or high-end summer harvests, we build standard cellulose cooling wet pads and industrial exhaust fans to drop interiors by up to 10°C. */}
+                        For summer-critical crops or larger polyhouses, we install fan and pad evaporative cooling systems that dramatically reduce internal temperature and protect yield quality
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Our Process - 6 Steps (PDF 3 Page 14) */}
+                {/* Our Process  */}
                 <div className="bg-gray-50 rounded-3.5xl p-8 sm:p-12 border border-gray-150">
                   <h3 className="text-2.5xl font-bold text-gray-950 text-center mb-12">Our 6-Step Polyhouse Process</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
-                      { step: "1", title: "Site Visit & Consultation", desc: "We visit your land, inspect soil levels and wind drafts, and discuss the size." },
-                      { step: "2", title: "Design & Estimation", desc: "We prepare detailed layouts and transparent pricing sheets layout with zero hidden extras." },
-                      { step: "3", title: "Material Procurement", desc: "We source certified GI structure pipes and poly films from reliable factories." },
-                      { step: "4", title: "On-site Construction", desc: "Our own well-trained and employed technician crew builds the structure foundation on-site." },
-                      { step: "5", title: "Systems Integration", desc: "We mount the ventilation rollers, internal drip, fogger nozzles, and testing lines." },
-                      { step: "6", title: "System Handover", desc: "We walk you through every operational aspect of control and check performance before leaving." }
+                      { step: "1", title: "Site Visit & Consultation", desc: " We visit your land, understand your crop plan, and discuss the size and type of structure that makes sense." },
+                      { step: "2", title: "Design & Estimation", desc: "We give you a clear layout and cost estimate with no hidden additions." },
+                      { step: "3", title: "Material Procurement", desc: "We source all components from trusted suppliers and manufacturers." },
+                      { step: "4", title: "On-site Construction", desc: "Our own team builds the structure. We don't subcontract the core work." },
+                      { step: "5", title: "Systems Integration", desc: "Ventilation, irrigation, cooling, foggers — installed and tested." },
+                      { step: "6", title: "System Handover", desc: "We walk you through the system before we leave." }
                     ].map((step, idx) => (
                       <div key={idx} className="bg-white p-6 rounded-2xl border border-gray-150 relative shadow-sm">
                         <span className="absolute top-4 right-4 text-3xl font-black text-green-100 flex items-center justify-center bg-green-50 w-10 h-10 rounded-full">{step.step}</span>
@@ -1013,7 +1079,8 @@ export default function Services() {
                 <div className="text-center bg-green-50 border border-green-100 p-8 rounded-3xl max-w-4xl mx-auto space-y-3">
                   <h4 className="text-xl font-bold text-gray-900">Where We Work</h4>
                   <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto text-sm sm:text-base">
-                    We construct turnkey agricultural structures across <strong>West Bengal</strong> and extend into neighbouring states. Not sure if we cover your area? Give us a call and we'll tell you directly!
+                  We operate across <strong> West Bengal </strong> and in neighbouring states. If you're unsure whether we cover your area, just call us and we'll tell you directly.
+                   {/* We construct turnkey agricultural structures across <strong>West Bengal</strong> and extend into neighbouring states. Not sure if we cover your area? Give us a call and we'll tell you directly!*/}
                   </p>
                   <div className="pt-2">
                     <Link to="/contact" className="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-2xl text-sm inline-block">
@@ -1044,7 +1111,8 @@ export default function Services() {
                       Diesel costs keep rising. Grid electricity isn't always reliable. And if you're farming in a location where power supply is irregular, you already know how much a dead pump can cost you in a dry spell. Solar pumping systems solve all of this in one shot — and thanks to government subsidies, many farmers can access them at a fraction of the actual cost.
                     </p>
                     <p className="text-gray-700 text-base sm:text-lg">
-                      We supply and install solar surface pumps and solar submersible pumps, taking care of the complete setup from the heavy galvanized mounting structures down to the pump motors.
+                    We supply and install solar surface pumps and solar submersible pumps, and we take care of the complete setup from the panel mounting structure down to the pump in the borewell or water body.
+                     {/* We supply and install solar surface pumps and solar submersible pumps, taking care of the complete setup from the heavy galvanized mounting structures down to the pump motors.*/}
                     </p>
                   </div>
                   <div className="rounded-3xl overflow-hidden shadow-md border border-gray-150">
@@ -1057,7 +1125,7 @@ export default function Services() {
                   </div>
                 </div>
 
-                {/* Sub-categories - arranged as requested with images and text below (PDF 3 Page 15) */}
+                {/* Sub-categories */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
                   {/* Surface Pumps */}
                   <div className="bg-white rounded-3xl border border-gray-150 shadow-sm overflow-hidden flex flex-col justify-between">
@@ -1075,13 +1143,15 @@ export default function Services() {
                         </div>
                         <h4 className="text-xl font-bold text-gray-950">Solar Surface Pumps</h4>
                         <p className="text-gray-650 text-sm leading-relaxed text-justify">
-                          Surface pump setups sit above the water level and draw cleanly from open sources like rivers, ponds, storage canals, or shallow surface rings. Sourced entirely from reputed brands.
+                        Surface pumps sit above ground and draw water from open water sources — ponds, rivers, canals, or shallow wells. They're ideal for fields with accessible surface water nearby.
+                         {/* Surface pump setups sit above the water level and draw cleanly from open sources like rivers, ponds, storage canals, or shallow surface rings. Sourced entirely from reputed brands.*/}
                         </p>
                       </div>
                     </div>
                     <div className="px-8 pb-8">
-                      <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
-                        <strong>Includes:</strong> Solar PV modules, MPPT controllers, pump motor, suction piping, and MMS.
+                      <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg text-center">
+                        <strong className="font-extrabold text-[#090a0a]">What we supply and install:</strong>
+                        Solar panels, pump controller, surface pump unit, piping, and module mounting structure. Every component is sourced from reputed manufacturers. Our team does the civil work, mounting, wiring, and commissioning..
                       </p>
                     </div>
                   </div>
@@ -1102,13 +1172,16 @@ export default function Services() {
                         </div>
                         <h4 className="text-xl font-bold text-gray-950">Solar Submersible Pumps</h4>
                         <p className="text-gray-650 text-sm leading-relaxed text-justify">
-                          Designed to reside down in narrow borewells or deep agricultural wells. Highly powerful units suited for districts where the ground water table drops low in pre-monsoon.
+                                               Submersible pumps go down into a borewell or deep well and push water up to the surface. They're more powerful and suited for areas where the water table is deep.
+
+                         
                         </p>
                       </div>
                     </div>
                     <div className="px-8 pb-8">
-                      <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
-                        <strong>Includes:</strong> Deep submersible pump unit, rising main pipes, copper wiring, and controllers.
+                      <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg text-center">
+                        <strong className="font-extrabold text-[#090a0a]">What we supply and install : </strong>
+                        Solar panels, MPPT pump controller, submersible pump, rising main pipes, panel mounting structure, and all necessary accessories. Fully installed and tested by our technicians.
                       </p>
                     </div>
                   </div>
@@ -1129,18 +1202,127 @@ export default function Services() {
                         </div>
                         <h4 className="text-xl font-bold text-gray-950">Module Mounting Structures (MMS)</h4>
                         <p className="text-gray-650 text-sm leading-relaxed text-justify">
-                          The PV panel stand is crucial. A weak structure shifts, rusts, or collapses under regional storm winds. We fabricate our own custom MMS using quality galvanized iron, cutting it carefully to lock in optimal solar tilt angles.
+                        The panel mounting structure is often underestimated — but a poor structure means panels shifting angle, corroding, or collapsing in high winds. We fabricate our own module mounting structures using quality galvanized iron or aluminium profiles, sourcing the raw material and cutting/assembling it ourselves. This gives us full control over quality and lets us optimize the tilt angle for maximum sunlight capture at your location.
+                          {/*The PV panel stand is crucial. A weak structure shifts, rusts, or collapses under regional storm winds. We fabricate our own custom MMS using quality galvanized iron, cutting it carefully to lock in optimal solar tilt angles.*/}
                         </p>
                       </div>
                     </div>
                     <div className="px-8 pb-8">
-                      <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
+                     {/* <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
                         <strong>Features:</strong> High wind rating, zero rust corrosion, direct factory GI sizing.
-                      </p>
+                      </p>*/}
                     </div>
                   </div>
-                </div>
 
+                  {/* NEW ADD ON */}
+
+                   {/* GOVERNMENT SUBSIDY SCHEMES */}
+
+                  <div className="bg-white rounded-3xl border border-gray-150 shadow-sm overflow-hidden flex flex-col justify-between">
+                    <div>
+                      <div className="h-48 overflow-hidden border-b border-gray-100">
+                        <img 
+                          src="https://res.cloudinary.com/dj3n3w4ka/image/upload/v1780319993/Pi7_image_tool_4_q2f4uz.jpg" 
+                          alt="Structure MMS panels" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-8 space-y-4">
+                        <div className="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl w-fit">
+                          <Shield className="w-5 h-5" />
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-950"> GOVERNMENT SUBSIDY SCHEMES </h4>
+                        <div className="space-y-3 text-sm text-gray-650 leading-relaxed text-justify">
+                          <p>
+                            Eligible farmers and farmer groups can access substantial subsidies on solar pump installations under schemes like <strong> PM-KUSUM (Component B) </strong> and state-level programs. We assist with:
+                          </p>
+                          <ul className="list-disc pl-5 space-y-1.5 text-gray-750 font-medium">
+                            <li>Checking eligibility</li>
+                            <li>Documentation support</li>
+                            <li>Coordination with relevant government departments</li>
+                            <li>Ensuring the installation meets subsidy compliance requirements</li>
+                          </ul>
+                          <p>
+                            If you're not sure whether you qualify, just{" "}
+                            <a 
+                              href={`https://wa.me/${phoneNo.replace(/[+\s]/g, '')}?text=${encodeURIComponent("Hello Green View, I am interested in checking my eligibility for PM-KUSUM / Govt Subsidy solar pump installations. Please guide me!")}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-emerald-600 hover:text-emerald-700 font-extrabold underline transition-colors"
+                            >
+                              message us on WhatsApp
+                            </a>{" "}
+                            or{" "}
+                            <a 
+                              href={`tel:${phoneNo.replace(/\s/g, '')}`}
+                              className="text-emerald-600 hover:text-emerald-700 font-extrabold underline transition-colors"
+                            >
+                              call us
+                            </a>{" "}
+                            — we'll find out for you.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="px-8 pb-8">
+                     {/* <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
+                        <strong>Features:</strong> High wind rating, zero rust corrosion, direct factory GI sizing.
+                      </p>*/}
+                    </div>
+                  </div>
+
+                   {/* PRIVATE INSTALLATIONS */}
+                  <div className="bg-white rounded-3xl border border-gray-150 shadow-sm overflow-hidden flex flex-col justify-between">
+                    <div>
+                      <div className="h-48 overflow-hidden border-b border-gray-100">
+                        <img 
+                          src="https://res.cloudinary.com/dj3n3w4ka/image/upload/v1780319993/Pi7_image_tool_4_q2f4uz.jpg" 
+                          alt="Structure MMS panels" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-8 space-y-4">
+                        <div className="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl w-fit">
+                          <Shield className="w-5 h-5" />
+                        </div>
+                        <h4 className="text-xl font-bold text-gray-950"> PRIVATE INSTALLATIONS </h4>
+                        <div className="space-y-3 text-sm text-gray-650 leading-relaxed text-justify">
+                          <p>
+                            For farmers or businesses that don't fall under subsidy criteria or simply want a faster installation without waiting for government processes, we also do private solar pump installations at competitive pricing. Same quality, same team, faster timeline.
+                          </p>
+                          <p>
+                            <a 
+                              href={`https://wa.me/${phoneNo.replace(/[+\s]/g, '')}?text=${encodeURIComponent("Hello Green View, I want to find out what solar pump subsidy I am eligible for. Please guide me!")}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-emerald-600 hover:text-emerald-700 font-extrabold underline transition-colors"
+                            >
+                              Message us on WhatsApp
+                            </a>{" "}
+                            or{" "}
+                            <a 
+                              href={`tel:${phoneNo.replace(/\s/g, '')}`}
+                              className="text-emerald-600 hover:text-emerald-700 font-extrabold underline transition-colors"
+                            >
+                              call us
+                            </a>{" "}
+                            to find out what subsidy you're eligible for.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="px-8 pb-8">
+                     {/* <p className="text-xs text-gray-500 font-bold bg-gray-50 border border-gray-150 p-2.5 rounded-lg">
+                        <strong>Features:</strong> High wind rating, zero rust corrosion, direct factory GI sizing.
+                      </p>*/}
+                    </div>
+                  </div>
+
+  
+
+                  
+
+                </div>
                 {/* Option A & Option B subsidy support omitted for now as requested (PDF 3 Page 15) */}
               </motion.div>
             )}
