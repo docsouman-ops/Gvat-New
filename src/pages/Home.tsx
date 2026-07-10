@@ -147,8 +147,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-green-50/70 via-emerald-50/40 to-green-50/70 rounded-3xl p-8 sm:p-12 border border-green-100 shadow-sm flex flex-col lg:flex-row gap-8 lg:gap-12 items-start relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-green-100/30 rounded-bl-full pointer-events-none" />
-            <div className="shrink-0 bg-green-600 p-5 rounded-2xl text-white shadow-lg shadow-green-600/20">
-              <Leaf className="w-10 h-10" />
+            <div className="shrink-0 bg-white p-3 rounded-2xl shadow-lg shadow-green-600/10 border border-green-100 w-24 h-24 flex items-center justify-center overflow-hidden">
+              <img 
+                src="/GREEN_VIEW_LOGO_WITH_FRONT.png" 
+                alt="Green View Agro Tech" 
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="space-y-6 relative z-10">
               <h2 className="text-3xl font-black text-gray-950 tracking-tight leading-none">Who We Are</h2>

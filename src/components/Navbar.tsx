@@ -32,22 +32,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-2.5 group">
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-green-600 bg-white group-hover:border-green-500 transition-colors shadow-md"
-              >
-                <img 
-                  src="/logo.jpg" 
-                  alt="Green View Agro Tech" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight leading-none text-gray-900">Green View</span>
-                <span className="text-[10px] font-black uppercase tracking-[0.2em] leading-none mt-1 text-green-600">Agro Tech</span>
-              </div>
+            <Link to="/" className="flex items-center group">
+              <motion.img 
+                whileHover={{ scale: 1.02 }}
+                src="/GREEN_VIEW_LOGO_WITH_FRONT.png" 
+                alt="Green View Agro Tech" 
+                className="h-14 sm:h-16 w-auto object-contain transition-transform"
+                referrerPolicy="no-referrer"
+              />
             </Link>
 
             {/* Desktop Nav */}

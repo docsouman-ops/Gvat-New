@@ -13,18 +13,14 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-green-600 bg-white">
+            <Link to="/" className="flex items-center">
+              <div className="relative h-12 overflow-hidden rounded-lg px-2.5 py-1 bg-white flex items-center justify-center shadow-md">
                 <img 
-                  src="/logo.jpg" 
+                  src="/GREEN_VIEW_LOGO_WITH_FRONT.png" 
                   alt="Green View Agro Tech" 
-                  className="w-full h-full object-cover"
+                  className="h-10 w-auto object-contain"
                   referrerPolicy="no-referrer"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-extrabold tracking-tight leading-none text-white">Green View</span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] leading-none mt-1 text-green-400">Agro Tech</span>
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-justify text-gray-400">
